@@ -1,2 +1,5 @@
 # GigantesdeMDF
-Gigantes de MDF funciona como um torneio entre robôs feitos a partir do ATMega328p e outros componentes para ter seus movimentos essenciais, esse robô se resume a uma espécie de carrinho que atira lazer nos outros robôs.
+## Introdução
+Este relatório apresenta o projeto **Gigantes de MDF**, uma iniciativa voltada à realização de um torneio entre robôs desenvolvidos com microcontrolador ATMega328p e componentes eletrônicos de apoio para execução dos movimentos essenciais.  
+
+No contexto do torneio, cada robô é estruturado como uma plataforma móvel semelhante a um carrinho, projetada para interagir com os demais competidores por meio de disparos de laser. Assim, o projeto reúne elementos de eletrônica embarcada, programação e estratégia de competição, servindo como base para o desenvolvimento técnico e prático dos participantes.
