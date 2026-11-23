@@ -1,0 +1,1668 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gigantes de MDF: Referência do Arquivo script/main.ino</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gigantes de MDF
+   </div>
+   <div id="projectbrief">Firmware do robo (ATmega328P, Arduino Nano)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Busca" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('main_8ino.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referência do Arquivo main.ino</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Gigante de MDF - firmware do robo (ATmega328P, Arduino Nano, 16 MHz).  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &lt;avr/io.h&gt;</code><br />
+<code>#include &lt;avr/interrupt.h&gt;</code><br />
+<code>#include &lt;util/atomic.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+</div>
+<p><a href="main_8ino_source.html">Ir para o código-fonte desse arquivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Definições e Macros</h2></td></tr>
+<tr class="memitem:a43bafb28b29491ec7f871319b5a3b2f8" id="r_a43bafb28b29491ec7f871319b5a3b2f8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a43bafb28b29491ec7f871319b5a3b2f8">F_CPU</a>&#160;&#160;&#160;16000000UL</td></tr>
+<tr class="memitem:ac2cd7394c5e37df51fef469b067209af" id="r_ac2cd7394c5e37df51fef469b067209af"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac2cd7394c5e37df51fef469b067209af">VELOCIDADE</a>&#160;&#160;&#160;200</td></tr>
+<tr class="memitem:aece98daf3f4d906d38ea6c03ae3d4f58" id="r_aece98daf3f4d906d38ea6c03ae3d4f58"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aece98daf3f4d906d38ea6c03ae3d4f58">TEMPO_GIRO_MS</a>&#160;&#160;&#160;500UL</td></tr>
+<tr class="memitem:a2d731619431edb138ef0b06fcbad7e00" id="r_a2d731619431edb138ef0b06fcbad7e00"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2d731619431edb138ef0b06fcbad7e00">TEMPO_PROTECAO_MS</a>&#160;&#160;&#160;5000UL</td></tr>
+<tr class="memitem:a986d874f0a23a892c5247ef5556057f3" id="r_a986d874f0a23a892c5247ef5556057f3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a986d874f0a23a892c5247ef5556057f3">LASER_PERIODO_MS</a>&#160;&#160;&#160;1000U</td></tr>
+<tr class="memitem:a4dbd908a61f0cf0eb6d89e957f376c63" id="r_a4dbd908a61f0cf0eb6d89e957f376c63"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4dbd908a61f0cf0eb6d89e957f376c63">LDR_LIMIAR_DISPARO</a>&#160;&#160;&#160;800U</td></tr>
+<tr class="memitem:a2aabff142749051d96c39e7febb833d8" id="r_a2aabff142749051d96c39e7febb833d8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2aabff142749051d96c39e7febb833d8">LDR_CONFIRMACOES</a>&#160;&#160;&#160;6U</td></tr>
+<tr class="memitem:a876e6ebf541ee5701e6c6492ce5b53a3" id="r_a876e6ebf541ee5701e6c6492ce5b53a3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a876e6ebf541ee5701e6c6492ce5b53a3">LDR_INTERVALO_MS</a>&#160;&#160;&#160;5UL</td></tr>
+<tr class="memitem:add56dedbc09f82766e39588e01978e7d" id="r_add56dedbc09f82766e39588e01978e7d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#add56dedbc09f82766e39588e01978e7d">DEBOUNCE_MS</a>&#160;&#160;&#160;20UL</td></tr>
+<tr class="memitem:a71decbf8baec197d0690e623629f59cc" id="r_a71decbf8baec197d0690e623629f59cc"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a71decbf8baec197d0690e623629f59cc">DEBOUNCE_RESET_MS</a>&#160;&#160;&#160;40UL</td></tr>
+<tr class="memitem:a32e761ffc3efa8d5b9b1ce1f2188fbc0" id="r_a32e761ffc3efa8d5b9b1ce1f2188fbc0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a32e761ffc3efa8d5b9b1ce1f2188fbc0">SERIAL_INTERVALO_MS</a>&#160;&#160;&#160;100UL</td></tr>
+<tr id="define-members-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Motor esquerdo - L293D, PORTD</div></td></tr>
+<tr class="memitem:ad8a029464656fcacc83c3c6034a92139" id="r_ad8a029464656fcacc83c3c6034a92139"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad8a029464656fcacc83c3c6034a92139">PWM_ESQ</a>&#160;&#160;&#160;PD3</td></tr>
+<tr class="memitem:a79194d149d38fb1fc03b02432602b9c2" id="r_a79194d149d38fb1fc03b02432602b9c2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a79194d149d38fb1fc03b02432602b9c2">ESQ_1</a>&#160;&#160;&#160;PD2</td></tr>
+<tr class="memitem:a4fc6b8d5fd7572f217af57ff85027f90" id="r_a4fc6b8d5fd7572f217af57ff85027f90"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4fc6b8d5fd7572f217af57ff85027f90">ESQ_2</a>&#160;&#160;&#160;PD4</td></tr>
+<tr id="define-members-1" class="groupHeader"><td colspan="2"><div class="groupHeader">Motor direito - L293D, PORTB</div></td></tr>
+<tr class="memitem:a5683ebcfe4b7a7c9df6a0f377cadc571" id="r_a5683ebcfe4b7a7c9df6a0f377cadc571"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a5683ebcfe4b7a7c9df6a0f377cadc571">PWM_DIR</a>&#160;&#160;&#160;PB3</td></tr>
+<tr class="memitem:a23062f25e229f52e0389c6af26ff6680" id="r_a23062f25e229f52e0389c6af26ff6680"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a23062f25e229f52e0389c6af26ff6680">DIR_1</a>&#160;&#160;&#160;PB2</td></tr>
+<tr class="memitem:a446bc93bc545a0282c7f21fb8079dae1" id="r_a446bc93bc545a0282c7f21fb8079dae1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a446bc93bc545a0282c7f21fb8079dae1">DIR_2</a>&#160;&#160;&#160;PB0</td></tr>
+<tr id="define-members-2" class="groupHeader"><td colspan="2"><div class="groupHeader">Botoes (pull-up interno, pressionado = nivel baixo)</div></td></tr>
+<tr class="memitem:af664840211950400111880ebce57e434" id="r_af664840211950400111880ebce57e434"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af664840211950400111880ebce57e434">BTN_FRENTE</a>&#160;&#160;&#160;PC2</td></tr>
+<tr class="memitem:a66946a5626226a02f937c4bf6fbd11c9" id="r_a66946a5626226a02f937c4bf6fbd11c9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a66946a5626226a02f937c4bf6fbd11c9">BTN_TRAS</a>&#160;&#160;&#160;PC1</td></tr>
+<tr class="memitem:a011ff3ce48468b16f85d17647b0dfdc1" id="r_a011ff3ce48468b16f85d17647b0dfdc1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a011ff3ce48468b16f85d17647b0dfdc1">BTN_ESQUERDA</a>&#160;&#160;&#160;PC4</td></tr>
+<tr class="memitem:ac7bc83a8b8b6237af2d079597473c364" id="r_ac7bc83a8b8b6237af2d079597473c364"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac7bc83a8b8b6237af2d079597473c364">BTN_DIREITA</a>&#160;&#160;&#160;PC3</td></tr>
+<tr class="memitem:aab2045f45ebaac6855a5674c8afafb7e" id="r_aab2045f45ebaac6855a5674c8afafb7e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aab2045f45ebaac6855a5674c8afafb7e">BTN_RESET</a>&#160;&#160;&#160;PB4</td></tr>
+<tr id="define-members-3" class="groupHeader"><td colspan="2"><div class="groupHeader">Sensor e laser</div></td></tr>
+<tr class="memitem:a9a31fb1fcebde645fa2ed1226e136e00" id="r_a9a31fb1fcebde645fa2ed1226e136e00"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9a31fb1fcebde645fa2ed1226e136e00">LDR_CANAL</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memitem:a7ec8393e9445109104fd54119e06fc08" id="r_a7ec8393e9445109104fd54119e06fc08"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7ec8393e9445109104fd54119e06fc08">LASER</a>&#160;&#160;&#160;PB1</td></tr>
+<tr id="define-members-4" class="groupHeader"><td colspan="2"><div class="groupHeader">LEDs de vida (PORTD)</div></td></tr>
+<tr class="memitem:a49f31f609e8aa450a42d9cd92a737fd3" id="r_a49f31f609e8aa450a42d9cd92a737fd3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a49f31f609e8aa450a42d9cd92a737fd3">LED_V1</a>&#160;&#160;&#160;PD5</td></tr>
+<tr class="memitem:a9d974e60fbb79f2610bd432ed6e22539" id="r_a9d974e60fbb79f2610bd432ed6e22539"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9d974e60fbb79f2610bd432ed6e22539">LED_V2</a>&#160;&#160;&#160;PD6</td></tr>
+<tr class="memitem:a693229446c8c9f9a4f2811fe13f08d7a" id="r_a693229446c8c9f9a4f2811fe13f08d7a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a693229446c8c9f9a4f2811fe13f08d7a">LED_V3</a>&#160;&#160;&#160;PD7</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerações</h2></td></tr>
+<tr class="memitem:a9d4630b1e0c310d9b8c562abd8114c49" id="r_a9d4630b1e0c310d9b8c562abd8114c49"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a9d4630b1e0c310d9b8c562abd8114c49">Estado</a> { <a class="el" href="#a9d4630b1e0c310d9b8c562abd8114c49a8bb9656555ba077468eec8909af2803a">ATIVO</a>
+, <a class="el" href="#a9d4630b1e0c310d9b8c562abd8114c49a343d5884a6b1c5347bfdbb043d3a0ee9">ATINGIDO</a>
+, <a class="el" href="#a9d4630b1e0c310d9b8c562abd8114c49a074f5812fee27f0235b2637935f95ae7">ELIMINADO</a>
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:ae9b180f762f781150187a88c1344e064" id="r_ae9b180f762f781150187a88c1344e064"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae9b180f762f781150187a88c1344e064">TIMER1_COMPA_vect</a> (void)</td></tr>
+<tr class="memdesc:ae9b180f762f781150187a88c1344e064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupcao do Timer1 (a cada 1 ms).  <br /></td></tr>
+<tr class="memitem:ac3bbaccb5dac3f81dd077b6256097783" id="r_ac3bbaccb5dac3f81dd077b6256097783"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#ac3bbaccb5dac3f81dd077b6256097783">agoraMs</a> ()</td></tr>
+<tr class="memdesc:ac3bbaccb5dac3f81dd077b6256097783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le o contador de milissegundos de forma atomica.  <br /></td></tr>
+<tr class="memitem:a2d92134cfd7596e534f3a280063dd8eb" id="r_a2d92134cfd7596e534f3a280063dd8eb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2d92134cfd7596e534f3a280063dd8eb">configurarTimer1</a> ()</td></tr>
+<tr class="memdesc:a2d92134cfd7596e534f3a280063dd8eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configura o Timer1 em CTC para gerar uma interrupcao a cada 1 ms.  <br /></td></tr>
+<tr class="memitem:ac9cc64ed836eb5785dea53a934c023e6" id="r_ac9cc64ed836eb5785dea53a934c023e6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac9cc64ed836eb5785dea53a934c023e6">uartInit</a> ()</td></tr>
+<tr class="memdesc:ac9cc64ed836eb5785dea53a934c023e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configura a USART0 a 115200 baud, 8N1, somente transmissao.  <br /></td></tr>
+<tr class="memitem:a98678d11563dfe258f386d9c609f982a" id="r_a98678d11563dfe258f386d9c609f982a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a98678d11563dfe258f386d9c609f982a">uartChar</a> (char c)</td></tr>
+<tr class="memdesc:a98678d11563dfe258f386d9c609f982a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envia um caractere pela serial.  <br /></td></tr>
+<tr class="memitem:ab00a103d125e1a6b1853806b09657d87" id="r_ab00a103d125e1a6b1853806b09657d87"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab00a103d125e1a6b1853806b09657d87">uartTexto</a> (const char *s)</td></tr>
+<tr class="memdesc:ab00a103d125e1a6b1853806b09657d87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envia uma string terminada em zero pela serial.  <br /></td></tr>
+<tr class="memitem:ad0ead377cb29c64bb60bec0d1fcb1a09" id="r_ad0ead377cb29c64bb60bec0d1fcb1a09"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad0ead377cb29c64bb60bec0d1fcb1a09">uartNumero</a> (uint16_t n)</td></tr>
+<tr class="memdesc:ad0ead377cb29c64bb60bec0d1fcb1a09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envia um numero sem sinal em decimal pela serial.  <br /></td></tr>
+<tr class="memitem:aad9538529a079befcd90d49a31e9ac09" id="r_aad9538529a079befcd90d49a31e9ac09"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aad9538529a079befcd90d49a31e9ac09">uartLinha</a> (const char *s)</td></tr>
+<tr class="memdesc:aad9538529a079befcd90d49a31e9ac09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envia um texto seguido de quebra de linha (retorno de carro e nova linha).  <br /></td></tr>
+<tr class="memitem:ac5fa23858c6c67a395d5bc8bdc7ab181" id="r_ac5fa23858c6c67a395d5bc8bdc7ab181"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac5fa23858c6c67a395d5bc8bdc7ab181">configurarPWM</a> ()</td></tr>
+<tr class="memdesc:ac5fa23858c6c67a395d5bc8bdc7ab181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configura o Timer2 em Fast PWM de 8 bits para os dois motores.  <br /></td></tr>
+<tr class="memitem:adee3038bba99db7c493216069cafc2ff" id="r_adee3038bba99db7c493216069cafc2ff"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adee3038bba99db7c493216069cafc2ff">motorEsquerdo</a> (int16_t v)</td></tr>
+<tr class="memdesc:adee3038bba99db7c493216069cafc2ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comanda o motor esquerdo (PORTD e OC2B).  <br /></td></tr>
+<tr class="memitem:aeaf63144740446ccb88b38a0ba18b8f2" id="r_aeaf63144740446ccb88b38a0ba18b8f2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aeaf63144740446ccb88b38a0ba18b8f2">motorDireito</a> (int16_t v)</td></tr>
+<tr class="memdesc:aeaf63144740446ccb88b38a0ba18b8f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comanda o motor direito (PORTB e OC2A).  <br /></td></tr>
+<tr class="memitem:a0c83f6dcbf3184874c4b2c5b75d7a8c1" id="r_a0c83f6dcbf3184874c4b2c5b75d7a8c1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0c83f6dcbf3184874c4b2c5b75d7a8c1">motores</a> (int16_t esq, int16_t dir)</td></tr>
+<tr class="memdesc:a0c83f6dcbf3184874c4b2c5b75d7a8c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a velocidade e o sentido dos dois motores.  <br /></td></tr>
+<tr class="memitem:a3f72d87240811fc0e125e5327c97b57f" id="r_a3f72d87240811fc0e125e5327c97b57f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3f72d87240811fc0e125e5327c97b57f">pararMotores</a> ()</td></tr>
+<tr class="memdesc:a3f72d87240811fc0e125e5327c97b57f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Para os dois motores (entradas do L293D em nivel baixo e PWM em zero).  <br /></td></tr>
+<tr class="memitem:a4845053216f2464ae1325c7931a81804" id="r_a4845053216f2464ae1325c7931a81804"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4845053216f2464ae1325c7931a81804">configurarBotoes</a> ()</td></tr>
+<tr class="memdesc:a4845053216f2464ae1325c7931a81804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configura os cinco botoes como entrada com pull-up interno.  <br /></td></tr>
+<tr class="memitem:a43da3fe5362571e1330bed631347a081" id="r_a43da3fe5362571e1330bed631347a081"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a43da3fe5362571e1330bed631347a081">atualizarBotao</a> (uint8_t indice, uint8_t leitura, uint32_t agora)</td></tr>
+<tr class="memdesc:a43da3fe5362571e1330bed631347a081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Faz o debounce de um botao.  <br /></td></tr>
+<tr class="memitem:a79c2b8e59c0574d1c6f4853638e76f6d" id="r_a79c2b8e59c0574d1c6f4853638e76f6d"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a79c2b8e59c0574d1c6f4853638e76f6d">atualizarBotoes</a> (uint32_t agora)</td></tr>
+<tr class="memdesc:a79c2b8e59c0574d1c6f4853638e76f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le os botoes e atualiza o estado estavel de cada um.  <br /></td></tr>
+<tr class="memitem:a7d68e7ec4af798a1aac61f4eb1f13363" id="r_a7d68e7ec4af798a1aac61f4eb1f13363"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7d68e7ec4af798a1aac61f4eb1f13363">configurarADC</a> ()</td></tr>
+<tr class="memdesc:a7d68e7ec4af798a1aac61f4eb1f13363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configura o ADC para ler o LDR no canal 5 (A5).  <br /></td></tr>
+<tr class="memitem:a1c9af92c19bdac207660f4c726c486af" id="r_a1c9af92c19bdac207660f4c726c486af"><td class="memItemLeft">uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#a1c9af92c19bdac207660f4c726c486af">lerADC</a> ()</td></tr>
+<tr class="memdesc:a1c9af92c19bdac207660f4c726c486af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Faz uma conversao do ADC e espera o resultado.  <br /></td></tr>
+<tr class="memitem:ae90077e7e204271b8b783be050ab658a" id="r_ae90077e7e204271b8b783be050ab658a"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#ae90077e7e204271b8b783be050ab658a">verificarLDR</a> (uint32_t agora)</td></tr>
+<tr class="memdesc:ae90077e7e204271b8b783be050ab658a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le o LDR e informa se o laser foi detectado.  <br /></td></tr>
+<tr class="memitem:ae34141f32dcecb96cb45a4e14a2fb70c" id="r_ae34141f32dcecb96cb45a4e14a2fb70c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae34141f32dcecb96cb45a4e14a2fb70c">atualizarLEDs</a> ()</td></tr>
+<tr class="memdesc:ae34141f32dcecb96cb45a4e14a2fb70c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acende os LEDs de acordo com o numero de vidas.  <br /></td></tr>
+<tr class="memitem:a7b967750ace77b5a3062de9a754e0ccc" id="r_a7b967750ace77b5a3062de9a754e0ccc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7b967750ace77b5a3062de9a754e0ccc">controleManual</a> ()</td></tr>
+<tr class="memdesc:a7b967750ace77b5a3062de9a754e0ccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Movimento manual: so anda se exatamente um botao de movimento estiver apertado.  <br /></td></tr>
+<tr class="memitem:afc18af222732072199c86a11ef5f7f8e" id="r_afc18af222732072199c86a11ef5f7f8e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afc18af222732072199c86a11ef5f7f8e">receberDano</a> (uint32_t agora)</td></tr>
+<tr class="memdesc:afc18af222732072199c86a11ef5f7f8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trata um acerto de laser: perde uma vida e inicia o giro automatico.  <br /></td></tr>
+<tr class="memitem:a5fdc1485c6b3d71b31b5ef47d499f7ba" id="r_a5fdc1485c6b3d71b31b5ef47d499f7ba"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5fdc1485c6b3d71b31b5ef47d499f7ba">reiniciar</a> (uint32_t agora)</td></tr>
+<tr class="memdesc:a5fdc1485c6b3d71b31b5ef47d499f7ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devolve as 3 vidas e volta ao estado ATIVO (botao de reset).  <br /></td></tr>
+<tr class="memitem:a4fc01d736fe50cf5b977f755b675f11d" id="r_a4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
+<tr class="memdesc:a4fc01d736fe50cf5b977f755b675f11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configura pinos, perifericos e interrupcoes. Executada uma vez, no inicio.  <br /></td></tr>
+<tr class="memitem:afe461d27b9c48d5921c00d521181f12f" id="r_afe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
+<tr class="memdesc:afe461d27b9c48d5921c00d521181f12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Laco principal, executado sem parar.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variáveis</h2></td></tr>
+<tr class="memitem:a1152c324c35402f12adc06b09a2769cc" id="r_a1152c324c35402f12adc06b09a2769cc"><td class="memItemLeft"><a class="el" href="#a9d4630b1e0c310d9b8c562abd8114c49">Estado</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1152c324c35402f12adc06b09a2769cc">estado</a> = <a class="el" href="#a9d4630b1e0c310d9b8c562abd8114c49a8bb9656555ba077468eec8909af2803a">ATIVO</a></td></tr>
+<tr class="memitem:a95481bcece7922e619e51af5e454d41d" id="r_a95481bcece7922e619e51af5e454d41d"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a95481bcece7922e619e51af5e454d41d">vidas</a> = 3</td></tr>
+<tr class="memitem:a38c7bf8d3b48f8ee789e9d8883e5add2" id="r_a38c7bf8d3b48f8ee789e9d8883e5add2"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a38c7bf8d3b48f8ee789e9d8883e5add2">inicioDano</a> = 0</td></tr>
+<tr class="memitem:a01be081ddc67a80fbd938ac86930ba6f" id="r_a01be081ddc67a80fbd938ac86930ba6f"><td class="memItemLeft">volatile uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a01be081ddc67a80fbd938ac86930ba6f">tempoMs</a> = 0</td></tr>
+<tr class="memitem:ad5ba65127d5e910cc084e09394212e7a" id="r_ad5ba65127d5e910cc084e09394212e7a"><td class="memItemLeft">volatile uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#ad5ba65127d5e910cc084e09394212e7a">contadorLaser</a> = 0</td></tr>
+<tr class="memitem:a16888315830ea686fea0b8f01e14bad9" id="r_a16888315830ea686fea0b8f01e14bad9"><td class="memItemLeft">volatile uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a16888315830ea686fea0b8f01e14bad9">laserLigado</a> = 1</td></tr>
+<tr class="memitem:a902a1eef50797f9c5f695f9b7a50bd95" id="r_a902a1eef50797f9c5f695f9b7a50bd95"><td class="memItemLeft">int16_t&#160;</td><td class="memItemRight"><a class="el" href="#a902a1eef50797f9c5f695f9b7a50bd95">ultimoEsq</a> = 999</td></tr>
+<tr class="memitem:a98d6c23ddd79d612c6a9def79f5f6a0a" id="r_a98d6c23ddd79d612c6a9def79f5f6a0a"><td class="memItemLeft">int16_t&#160;</td><td class="memItemRight"><a class="el" href="#a98d6c23ddd79d612c6a9def79f5f6a0a">ultimoDir</a> = 999</td></tr>
+<tr class="memitem:ab69bc0222eb36d0696bd2327259e87d1" id="r_ab69bc0222eb36d0696bd2327259e87d1"><td class="memItemLeft">const uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#ab69bc0222eb36d0696bd2327259e87d1">mascaras</a> [5]</td></tr>
+<tr class="memitem:a2422816b3930f3072c46f78d371db056" id="r_a2422816b3930f3072c46f78d371db056"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a2422816b3930f3072c46f78d371db056">brutoAnterior</a> [5]</td></tr>
+<tr class="memitem:affbde4f0b59289272937f7d424e85631" id="r_affbde4f0b59289272937f7d424e85631"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#affbde4f0b59289272937f7d424e85631">estavel</a> [5]</td></tr>
+<tr class="memitem:a6a1fd983e7ef7f961258027f31601b3f" id="r_a6a1fd983e7ef7f961258027f31601b3f"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a6a1fd983e7ef7f961258027f31601b3f">desdeMudanca</a> [5]</td></tr>
+<tr class="memitem:ad992b968a57d270eed499be052dafd58" id="r_ad992b968a57d270eed499be052dafd58"><td class="memItemLeft">uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#ad992b968a57d270eed499be052dafd58">valorLDR</a> = 0</td></tr>
+<tr class="memitem:af75c471cd888822991fcec1b74362662" id="r_af75c471cd888822991fcec1b74362662"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#af75c471cd888822991fcec1b74362662">contadorDano</a> = 0</td></tr>
+<tr class="memitem:a0b7d706039d0cc1279689f9fc01bc8ad" id="r_a0b7d706039d0cc1279689f9fc01bc8ad"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a0b7d706039d0cc1279689f9fc01bc8ad">ultimaAmostraLDR</a> = 0</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Gigante de MDF - firmware do robo (ATmega328P, Arduino Nano, 16 MHz). </p>
+<p>Tudo e feito direto nos registradores, sem funcoes do Arduino. O programa usa <a class="el" href="#a4fc01d736fe50cf5b977f755b675f11d" title="Configura pinos, perifericos e interrupcoes. Executada uma vez, no inicio.">setup()</a> e <a class="el" href="#afe461d27b9c48d5921c00d521181f12f" title="Laco principal, executado sem parar.">loop()</a>, que sao chamados pelo nucleo do Arduino.</p>
+<p>Perifericos usados:</p><ul>
+<li>Timer1: base de tempo de 1 ms e controle do laser (1 s ligado, 1 s desligado).</li>
+<li>Timer2: PWM dos dois motores (OC2B = motor esquerdo, OC2A = motor direito).</li>
+<li>ADC canal 5: leitura do LDR (receptor do laser).</li>
+<li>USART0: mensagens de depuracao a 115200 baud (somente transmissao).</li>
+</ul>
+<p>Funcionamento:</p><ul>
+<li>Os quatro botoes movem o robo enquanto exatamente um deles estiver pressionado.</li>
+<li>Quando o LDR fica acima do limiar por LDR_CONFIRMACOES leituras seguidas, o robo perde uma vida, gira por TEMPO_GIRO_MS, para e fica TEMPO_PROTECAO_MS sem reagir (motores e leitura do LDR desativados).</li>
+<li>Sem vidas, o robo fica parado ate o botao de reset ser apertado.</li>
+</ul>
+<p>Mapeamento de pinos conforme o esquematico v2.0. </p>
+
+<p class="definition">Definição no arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Definições e macros</h2>
+<a id="ac7bc83a8b8b6237af2d079597473c364" name="ac7bc83a8b8b6237af2d079597473c364"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7bc83a8b8b6237af2d079597473c364">&#9670;&#160;</a></span>BTN_DIREITA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BTN_DIREITA&#160;&#160;&#160;PC3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A3 (PORTC) - botao de giro para a direita. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00069">69</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a011ff3ce48468b16f85d17647b0dfdc1" name="a011ff3ce48468b16f85d17647b0dfdc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a011ff3ce48468b16f85d17647b0dfdc1">&#9670;&#160;</a></span>BTN_ESQUERDA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BTN_ESQUERDA&#160;&#160;&#160;PC4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A4 (PORTC) - botao de giro para a esquerda. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00067">67</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="af664840211950400111880ebce57e434" name="af664840211950400111880ebce57e434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af664840211950400111880ebce57e434">&#9670;&#160;</a></span>BTN_FRENTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BTN_FRENTE&#160;&#160;&#160;PC2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A2 (PORTC) - botao de frente. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00063">63</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="aab2045f45ebaac6855a5674c8afafb7e" name="aab2045f45ebaac6855a5674c8afafb7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab2045f45ebaac6855a5674c8afafb7e">&#9670;&#160;</a></span>BTN_RESET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BTN_RESET&#160;&#160;&#160;PB4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>D12 (PORTB) - botao de reset das vidas. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00071">71</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a66946a5626226a02f937c4bf6fbd11c9" name="a66946a5626226a02f937c4bf6fbd11c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66946a5626226a02f937c4bf6fbd11c9">&#9670;&#160;</a></span>BTN_TRAS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BTN_TRAS&#160;&#160;&#160;PC1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A1 (PORTC) - botao de re. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00065">65</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="add56dedbc09f82766e39588e01978e7d" name="add56dedbc09f82766e39588e01978e7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add56dedbc09f82766e39588e01978e7d">&#9670;&#160;</a></span>DEBOUNCE_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEBOUNCE_MS&#160;&#160;&#160;20UL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Tempo que a leitura de um botao de movimento precisa ficar estavel, em ms. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00124">124</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a71decbf8baec197d0690e623629f59cc" name="a71decbf8baec197d0690e623629f59cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71decbf8baec197d0690e623629f59cc">&#9670;&#160;</a></span>DEBOUNCE_RESET_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEBOUNCE_RESET_MS&#160;&#160;&#160;40UL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Tempo que a leitura do botao de reset precisa ficar estavel, em ms. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00126">126</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a23062f25e229f52e0389c6af26ff6680" name="a23062f25e229f52e0389c6af26ff6680"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23062f25e229f52e0389c6af26ff6680">&#9670;&#160;</a></span>DIR_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DIR_1&#160;&#160;&#160;PB2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>D10 - entrada 3A do L293D. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00054">54</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a446bc93bc545a0282c7f21fb8079dae1" name="a446bc93bc545a0282c7f21fb8079dae1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a446bc93bc545a0282c7f21fb8079dae1">&#9670;&#160;</a></span>DIR_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DIR_2&#160;&#160;&#160;PB0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>D8 - entrada 4A do L293D. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00056">56</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a79194d149d38fb1fc03b02432602b9c2" name="a79194d149d38fb1fc03b02432602b9c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79194d149d38fb1fc03b02432602b9c2">&#9670;&#160;</a></span>ESQ_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ESQ_1&#160;&#160;&#160;PD2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>D2 - entrada 1A do L293D. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00043">43</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a4fc6b8d5fd7572f217af57ff85027f90" name="a4fc6b8d5fd7572f217af57ff85027f90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc6b8d5fd7572f217af57ff85027f90">&#9670;&#160;</a></span>ESQ_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ESQ_2&#160;&#160;&#160;PD4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>D4 - entrada 2A do L293D. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00045">45</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a43bafb28b29491ec7f871319b5a3b2f8" name="a43bafb28b29491ec7f871319b5a3b2f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43bafb28b29491ec7f871319b5a3b2f8">&#9670;&#160;</a></span>F_CPU</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define F_CPU&#160;&#160;&#160;16000000UL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Clock do microcontrolador, em Hz. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00025">25</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a7ec8393e9445109104fd54119e06fc08" name="a7ec8393e9445109104fd54119e06fc08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ec8393e9445109104fd54119e06fc08">&#9670;&#160;</a></span>LASER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LASER&#160;&#160;&#160;PB1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>D9 (PORTB) - saida do laser. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00080">80</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a986d874f0a23a892c5247ef5556057f3" name="a986d874f0a23a892c5247ef5556057f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a986d874f0a23a892c5247ef5556057f3">&#9670;&#160;</a></span>LASER_PERIODO_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LASER_PERIODO_MS&#160;&#160;&#160;1000U</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Tempo ligado e tempo desligado do laser, em ms. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00111">111</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a9a31fb1fcebde645fa2ed1226e136e00" name="a9a31fb1fcebde645fa2ed1226e136e00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a31fb1fcebde645fa2ed1226e136e00">&#9670;&#160;</a></span>LDR_CANAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LDR_CANAL&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A5 - canal do ADC ligado ao LDR (entrada analogica, sem pull-up). </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00078">78</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a2aabff142749051d96c39e7febb833d8" name="a2aabff142749051d96c39e7febb833d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aabff142749051d96c39e7febb833d8">&#9670;&#160;</a></span>LDR_CONFIRMACOES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LDR_CONFIRMACOES&#160;&#160;&#160;6U</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Leituras seguidas acima do limiar necessarias para confirmar o acerto. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00119">119</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a876e6ebf541ee5701e6c6492ce5b53a3" name="a876e6ebf541ee5701e6c6492ce5b53a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a876e6ebf541ee5701e6c6492ce5b53a3">&#9670;&#160;</a></span>LDR_INTERVALO_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LDR_INTERVALO_MS&#160;&#160;&#160;5UL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Intervalo entre duas leituras do LDR, em ms. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00121">121</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a4dbd908a61f0cf0eb6d89e957f376c63" name="a4dbd908a61f0cf0eb6d89e957f376c63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dbd908a61f0cf0eb6d89e957f376c63">&#9670;&#160;</a></span>LDR_LIMIAR_DISPARO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LDR_LIMIAR_DISPARO&#160;&#160;&#160;800U</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Leitura do ADC (0..1023) a partir da qual ha laser (valor medido na PCB). </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00115">115</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a49f31f609e8aa450a42d9cd92a737fd3" name="a49f31f609e8aa450a42d9cd92a737fd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49f31f609e8aa450a42d9cd92a737fd3">&#9670;&#160;</a></span>LED_V1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_V1&#160;&#160;&#160;PD5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>D5 - acende com 1 vida ou mais. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00087">87</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a9d974e60fbb79f2610bd432ed6e22539" name="a9d974e60fbb79f2610bd432ed6e22539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d974e60fbb79f2610bd432ed6e22539">&#9670;&#160;</a></span>LED_V2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_V2&#160;&#160;&#160;PD6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>D6 - acende com 2 vidas ou mais. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00089">89</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a693229446c8c9f9a4f2811fe13f08d7a" name="a693229446c8c9f9a4f2811fe13f08d7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a693229446c8c9f9a4f2811fe13f08d7a">&#9670;&#160;</a></span>LED_V3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_V3&#160;&#160;&#160;PD7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>D7 - acende com 3 vidas. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00091">91</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a5683ebcfe4b7a7c9df6a0f377cadc571" name="a5683ebcfe4b7a7c9df6a0f377cadc571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5683ebcfe4b7a7c9df6a0f377cadc571">&#9670;&#160;</a></span>PWM_DIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PWM_DIR&#160;&#160;&#160;PB3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>D11 - EN3,4 do L293D, PWM (OC2A). </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00052">52</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="ad8a029464656fcacc83c3c6034a92139" name="ad8a029464656fcacc83c3c6034a92139"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8a029464656fcacc83c3c6034a92139">&#9670;&#160;</a></span>PWM_ESQ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PWM_ESQ&#160;&#160;&#160;PD3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>D3 - EN1,2 do L293D, PWM (OC2B). </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00041">41</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a32e761ffc3efa8d5b9b1ce1f2188fbc0" name="a32e761ffc3efa8d5b9b1ce1f2188fbc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32e761ffc3efa8d5b9b1ce1f2188fbc0">&#9670;&#160;</a></span>SERIAL_INTERVALO_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIAL_INTERVALO_MS&#160;&#160;&#160;100UL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Intervalo entre as mensagens de depuracao do LDR, em ms. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00129">129</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="aece98daf3f4d906d38ea6c03ae3d4f58" name="aece98daf3f4d906d38ea6c03ae3d4f58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aece98daf3f4d906d38ea6c03ae3d4f58">&#9670;&#160;</a></span>TEMPO_GIRO_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPO_GIRO_MS&#160;&#160;&#160;500UL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Tempo do giro automatico apos um acerto, em ms (ajustar apos teste fisico). </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00103">103</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a2d731619431edb138ef0b06fcbad7e00" name="a2d731619431edb138ef0b06fcbad7e00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d731619431edb138ef0b06fcbad7e00">&#9670;&#160;</a></span>TEMPO_PROTECAO_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMPO_PROTECAO_MS&#160;&#160;&#160;5000UL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Tempo, contado a partir do acerto, com motores e leitura do LDR desativados, em ms. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00107">107</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="ac2cd7394c5e37df51fef469b067209af" name="ac2cd7394c5e37df51fef469b067209af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2cd7394c5e37df51fef469b067209af">&#9670;&#160;</a></span>VELOCIDADE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VELOCIDADE&#160;&#160;&#160;200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Duty do PWM dos motores, de 0 a 255. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00099">99</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumerações</h2>
+<a id="a9d4630b1e0c310d9b8c562abd8114c49" name="a9d4630b1e0c310d9b8c562abd8114c49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d4630b1e0c310d9b8c562abd8114c49">&#9670;&#160;</a></span>Estado</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a9d4630b1e0c310d9b8c562abd8114c49">Estado</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Estados da maquina de estados do jogo. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumeradores</th></tr><tr><td class="fieldname"><a id="a9d4630b1e0c310d9b8c562abd8114c49a8bb9656555ba077468eec8909af2803a" name="a9d4630b1e0c310d9b8c562abd8114c49a8bb9656555ba077468eec8909af2803a"></a>ATIVO&#160;</td><td class="fielddoc"><p>Controle manual e leitura do LDR ligados. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9d4630b1e0c310d9b8c562abd8114c49a343d5884a6b1c5347bfdbb043d3a0ee9" name="a9d4630b1e0c310d9b8c562abd8114c49a343d5884a6b1c5347bfdbb043d3a0ee9"></a>ATINGIDO&#160;</td><td class="fielddoc"><p>Giro automatico e pausa de protecao apos um acerto. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9d4630b1e0c310d9b8c562abd8114c49a074f5812fee27f0235b2637935f95ae7" name="a9d4630b1e0c310d9b8c562abd8114c49a074f5812fee27f0235b2637935f95ae7"></a>ELIMINADO&#160;</td><td class="fielddoc"><p>Sem vidas: aguarda o botao de reset. </p>
+</td></tr>
+</table>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00136">136</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Funções</h2>
+<a id="ac3bbaccb5dac3f81dd077b6256097783" name="ac3bbaccb5dac3f81dd077b6256097783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3bbaccb5dac3f81dd077b6256097783">&#9670;&#160;</a></span>agoraMs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t agoraMs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le o contador de milissegundos de forma atomica. </p>
+<p>As interrupcoes ficam desligadas durante a copia, para nao ler o valor de 32 bits pela metade enquanto a interrupcao o altera.</p>
+<dl class="section return"><dt>Retorna</dt><dd>Milissegundos desde o boot. </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00194">194</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a43da3fe5362571e1330bed631347a081" name="a43da3fe5362571e1330bed631347a081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43da3fe5362571e1330bed631347a081">&#9670;&#160;</a></span>atualizarBotao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t atualizarBotao </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>indice</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>leitura</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>agora</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Faz o debounce de um botao. </p>
+<p>A leitura so vira o estado estavel depois de ficar igual por DEBOUNCE_MS (DEBOUNCE_RESET_MS no reset).</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">indice</td><td>Botao: 0 = frente, 1 = tras, 2 = esquerda, 3 = direita, 4 = reset. </td></tr>
+    <tr><td class="paramname">leitura</td><td>Leitura bruta do pino (1 = solto, 0 = apertado). </td></tr>
+    <tr><td class="paramname">agora</td><td>Tempo atual, em ms. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>1 se o estado estavel do botao acabou de mudar, 0 caso contrario. </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00489">489</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a79c2b8e59c0574d1c6f4853638e76f6d" name="a79c2b8e59c0574d1c6f4853638e76f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79c2b8e59c0574d1c6f4853638e76f6d">&#9670;&#160;</a></span>atualizarBotoes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t atualizarBotoes </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>agora</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le os botoes e atualiza o estado estavel de cada um. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">agora</td><td>Tempo atual, em ms. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>1 se o estado estavel do botao de reset acabou de mudar, 0 caso contrario. </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00520">520</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="ae34141f32dcecb96cb45a4e14a2fb70c" name="ae34141f32dcecb96cb45a4e14a2fb70c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae34141f32dcecb96cb45a4e14a2fb70c">&#9670;&#160;</a></span>atualizarLEDs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void atualizarLEDs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Acende os LEDs de acordo com o numero de vidas. </p>
+<p>Grava so os tres bits dos LEDs no PORTD, sem alterar os demais pinos. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00627">627</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a7d68e7ec4af798a1aac61f4eb1f13363" name="a7d68e7ec4af798a1aac61f4eb1f13363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d68e7ec4af798a1aac61f4eb1f13363">&#9670;&#160;</a></span>configurarADC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void configurarADC </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configura o ADC para ler o LDR no canal 5 (A5). </p>
+<p>Referencia AVcc, prescaler 128 (125 kHz) e buffer digital do pino desligado. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00553">553</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a4845053216f2464ae1325c7931a81804" name="a4845053216f2464ae1325c7931a81804"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4845053216f2464ae1325c7931a81804">&#9670;&#160;</a></span>configurarBotoes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void configurarBotoes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configura os cinco botoes como entrada com pull-up interno. </p>
+<p>Tambem inicializa os vetores com a leitura atual, para comecar com tudo solto. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00447">447</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="ac5fa23858c6c67a395d5bc8bdc7ab181" name="ac5fa23858c6c67a395d5bc8bdc7ab181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5fa23858c6c67a395d5bc8bdc7ab181">&#9670;&#160;</a></span>configurarPWM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void configurarPWM </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configura o Timer2 em Fast PWM de 8 bits para os dois motores. </p>
+<p>OC2A (D11) e OC2B (D3) nao invertidos, prescaler 64 (cerca de 976 Hz). O duty comeca em 0 (motores parados). </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00313">313</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a2d92134cfd7596e534f3a280063dd8eb" name="a2d92134cfd7596e534f3a280063dd8eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d92134cfd7596e534f3a280063dd8eb">&#9670;&#160;</a></span>configurarTimer1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void configurarTimer1 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configura o Timer1 em CTC para gerar uma interrupcao a cada 1 ms. </p>
+<p>Com prescaler 64 e OCR1A = 249: 16 MHz / 64 / 250 = 1000 Hz. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00209">209</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a7b967750ace77b5a3062de9a754e0ccc" name="a7b967750ace77b5a3062de9a754e0ccc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b967750ace77b5a3062de9a754e0ccc">&#9670;&#160;</a></span>controleManual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void controleManual </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Movimento manual: so anda se exatamente um botao de movimento estiver apertado. </p>
+<p>Com nenhum botao, ou com dois ou mais, os motores param. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00651">651</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a1c9af92c19bdac207660f4c726c486af" name="a1c9af92c19bdac207660f4c726c486af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c9af92c19bdac207660f4c726c486af">&#9670;&#160;</a></span>lerADC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t lerADC </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Faz uma conversao do ADC e espera o resultado. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Leitura de 10 bits (0 a 1023). </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00572">572</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="afe461d27b9c48d5921c00d521181f12f" name="afe461d27b9c48d5921c00d521181f12f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe461d27b9c48d5921c00d521181f12f">&#9670;&#160;</a></span>loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Laco principal, executado sem parar. </p>
+<p>Atualiza os botoes e age conforme o estado:</p><ul>
+<li>ATIVO: controle manual, leitura do LDR e mensagem de depuracao a cada SERIAL_INTERVALO_MS.</li>
+<li>ATINGIDO: gira por TEMPO_GIRO_MS, para e espera TEMPO_PROTECAO_MS (sem ler o LDR); depois vai para ELIMINADO (sem vidas) ou volta a ATIVO.</li>
+<li>ELIMINADO: motores parados ate o botao de reset ser apertado. </li>
+</ul>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00830">830</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="aeaf63144740446ccb88b38a0ba18b8f2" name="aeaf63144740446ccb88b38a0ba18b8f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaf63144740446ccb88b38a0ba18b8f2">&#9670;&#160;</a></span>motorDireito()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void motorDireito </td>
+          <td>(</td>
+          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Comanda o motor direito (PORTB e OC2A). </p>
+<p>Limita v a +-255 e ignora valores repetidos. Zera o PWM antes de trocar o sentido.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>Velocidade com sinal: positiva = frente, negativa = tras, 0 = parado. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00373">373</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a0c83f6dcbf3184874c4b2c5b75d7a8c1" name="a0c83f6dcbf3184874c4b2c5b75d7a8c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c83f6dcbf3184874c4b2c5b75d7a8c1">&#9670;&#160;</a></span>motores()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void motores </td>
+          <td>(</td>
+          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>esq</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>dir</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define a velocidade e o sentido dos dois motores. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">esq</td><td>Motor esquerdo, de -255 a 255. </td></tr>
+    <tr><td class="paramname">dir</td><td>Motor direito, de -255 a 255. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00404">404</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="adee3038bba99db7c493216069cafc2ff" name="adee3038bba99db7c493216069cafc2ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adee3038bba99db7c493216069cafc2ff">&#9670;&#160;</a></span>motorEsquerdo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void motorEsquerdo </td>
+          <td>(</td>
+          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Comanda o motor esquerdo (PORTD e OC2B). </p>
+<p>Limita v a +-255 e ignora valores repetidos. Zera o PWM antes de trocar o sentido.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>Velocidade com sinal: positiva = frente, negativa = tras, 0 = parado. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00341">341</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a3f72d87240811fc0e125e5327c97b57f" name="a3f72d87240811fc0e125e5327c97b57f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f72d87240811fc0e125e5327c97b57f">&#9670;&#160;</a></span>pararMotores()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pararMotores </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Para os dois motores (entradas do L293D em nivel baixo e PWM em zero). </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00412">412</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="afc18af222732072199c86a11ef5f7f8e" name="afc18af222732072199c86a11ef5f7f8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc18af222732072199c86a11ef5f7f8e">&#9670;&#160;</a></span>receberDano()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void receberDano </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>agora</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Trata um acerto de laser: perde uma vida e inicia o giro automatico. </p>
+<p>So atua no estado ATIVO e com pelo menos uma vida.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">agora</td><td>Tempo atual, em ms. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00697">697</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a5fdc1485c6b3d71b31b5ef47d499f7ba" name="a5fdc1485c6b3d71b31b5ef47d499f7ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fdc1485c6b3d71b31b5ef47d499f7ba">&#9670;&#160;</a></span>reiniciar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void reiniciar </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>agora</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devolve as 3 vidas e volta ao estado ATIVO (botao de reset). </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">agora</td><td>Tempo atual, em ms. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00730">730</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a4fc01d736fe50cf5b977f755b675f11d" name="a4fc01d736fe50cf5b977f755b675f11d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc01d736fe50cf5b977f755b675f11d">&#9670;&#160;</a></span>setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setup </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configura pinos, perifericos e interrupcoes. Executada uma vez, no inicio. </p>
+<p>Coloca os motores parados, acende os 3 LEDs, descarta a primeira conversao do ADC, acende o laser e liga as interrupcoes. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00755">755</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="ae9b180f762f781150187a88c1344e064" name="ae9b180f762f781150187a88c1344e064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b180f762f781150187a88c1344e064">&#9670;&#160;</a></span>TIMER1_COMPA_vect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TIMER1_COMPA_vect </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interrupcao do Timer1 (a cada 1 ms). </p>
+<p>Incrementa o contador de milissegundos e inverte o laser a cada LASER_PERIODO_MS. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00169">169</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a98678d11563dfe258f386d9c609f982a" name="a98678d11563dfe258f386d9c609f982a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98678d11563dfe258f386d9c609f982a">&#9670;&#160;</a></span>uartChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uartChar </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envia um caractere pela serial. </p>
+<p>Espera o registrador de dados ficar livre (UDRE0) e grava o caractere em UDR0.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Caractere a enviar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00251">251</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="ac9cc64ed836eb5785dea53a934c023e6" name="ac9cc64ed836eb5785dea53a934c023e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9cc64ed836eb5785dea53a934c023e6">&#9670;&#160;</a></span>uartInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uartInit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configura a USART0 a 115200 baud, 8N1, somente transmissao. </p>
+<p>Com U2X0 e UBRR0 = 16 o baud real e de cerca de 117647 (erro de ~2%). </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00233">233</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="aad9538529a079befcd90d49a31e9ac09" name="aad9538529a079befcd90d49a31e9ac09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad9538529a079befcd90d49a31e9ac09">&#9670;&#160;</a></span>uartLinha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uartLinha </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envia um texto seguido de quebra de linha (retorno de carro e nova linha). </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>Texto a enviar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00298">298</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="ad0ead377cb29c64bb60bec0d1fcb1a09" name="ad0ead377cb29c64bb60bec0d1fcb1a09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0ead377cb29c64bb60bec0d1fcb1a09">&#9670;&#160;</a></span>uartNumero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uartNumero </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envia um numero sem sinal em decimal pela serial. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Numero de 0 a 65535. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00274">274</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="ab00a103d125e1a6b1853806b09657d87" name="ab00a103d125e1a6b1853806b09657d87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab00a103d125e1a6b1853806b09657d87">&#9670;&#160;</a></span>uartTexto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uartTexto </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envia uma string terminada em zero pela serial. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>Texto a enviar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00263">263</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="ae90077e7e204271b8b783be050ab658a" name="ae90077e7e204271b8b783be050ab658a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae90077e7e204271b8b783be050ab658a">&#9670;&#160;</a></span>verificarLDR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t verificarLDR </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>agora</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le o LDR e informa se o laser foi detectado. </p>
+<p>So le a cada LDR_INTERVALO_MS. O acerto e confirmado quando LDR_CONFIRMACOES leituras seguidas ficam em LDR_LIMIAR_DISPARO ou mais.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">agora</td><td>Tempo atual, em ms. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>1 quando o acerto foi confirmado, 0 caso contrario. </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00593">593</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variáveis</h2>
+<a id="a2422816b3930f3072c46f78d371db056" name="a2422816b3930f3072c46f78d371db056"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2422816b3930f3072c46f78d371db056">&#9670;&#160;</a></span>brutoAnterior</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t brutoAnterior[5]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ultima leitura bruta de cada botao (1 = solto, 0 = apertado). </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00436">436</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="af75c471cd888822991fcec1b74362662" name="af75c471cd888822991fcec1b74362662"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af75c471cd888822991fcec1b74362662">&#9670;&#160;</a></span>contadorDano</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t contadorDano = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Leituras seguidas do LDR acima do limiar (filtro de confirmacao do acerto). </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00544">544</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="ad5ba65127d5e910cc084e09394212e7a" name="ad5ba65127d5e910cc084e09394212e7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5ba65127d5e910cc084e09394212e7a">&#9670;&#160;</a></span>contadorLaser</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint16_t contadorLaser = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Milissegundos desde a ultima inversao do laser. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00160">160</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a6a1fd983e7ef7f961258027f31601b3f" name="a6a1fd983e7ef7f961258027f31601b3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a1fd983e7ef7f961258027f31601b3f">&#9670;&#160;</a></span>desdeMudanca</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t desdeMudanca[5]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instante em que a leitura bruta de cada botao mudou pela ultima vez, em ms. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00440">440</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a1152c324c35402f12adc06b09a2769cc" name="a1152c324c35402f12adc06b09a2769cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1152c324c35402f12adc06b09a2769cc">&#9670;&#160;</a></span>estado</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a9d4630b1e0c310d9b8c562abd8114c49">Estado</a> estado = <a class="el" href="#a9d4630b1e0c310d9b8c562abd8114c49a8bb9656555ba077468eec8909af2803a">ATIVO</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="#a9d4630b1e0c310d9b8c562abd8114c49">Estado</a> atual da maquina de estados. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00146">146</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="affbde4f0b59289272937f7d424e85631" name="affbde4f0b59289272937f7d424e85631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affbde4f0b59289272937f7d424e85631">&#9670;&#160;</a></span>estavel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t estavel[5]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="#a9d4630b1e0c310d9b8c562abd8114c49">Estado</a> confirmado de cada botao apos o debounce (1 = solto, 0 = apertado). </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00438">438</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a38c7bf8d3b48f8ee789e9d8883e5add2" name="a38c7bf8d3b48f8ee789e9d8883e5add2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38c7bf8d3b48f8ee789e9d8883e5add2">&#9670;&#160;</a></span>inicioDano</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t inicioDano = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instante do ultimo acerto, em ms. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00151">151</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a16888315830ea686fea0b8f01e14bad9" name="a16888315830ea686fea0b8f01e14bad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16888315830ea686fea0b8f01e14bad9">&#9670;&#160;</a></span>laserLigado</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t laserLigado = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fase do laser: 1 = ligado, 0 = desligado. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00162">162</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="ab69bc0222eb36d0696bd2327259e87d1" name="ab69bc0222eb36d0696bd2327259e87d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab69bc0222eb36d0696bd2327259e87d1">&#9670;&#160;</a></span>mascaras</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t mascaras[5]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">                       = {</div>
+<div class="line">    (1 &lt;&lt; <a class="code hl_define" href="#af664840211950400111880ebce57e434">BTN_FRENTE</a>),</div>
+<div class="line">    (1 &lt;&lt; <a class="code hl_define" href="#a66946a5626226a02f937c4bf6fbd11c9">BTN_TRAS</a>),</div>
+<div class="line">    (1 &lt;&lt; <a class="code hl_define" href="#a011ff3ce48468b16f85d17647b0dfdc1">BTN_ESQUERDA</a>),</div>
+<div class="line">    (1 &lt;&lt; <a class="code hl_define" href="#ac7bc83a8b8b6237af2d079597473c364">BTN_DIREITA</a>),</div>
+<div class="line">    (1 &lt;&lt; <a class="code hl_define" href="#aab2045f45ebaac6855a5674c8afafb7e">BTN_RESET</a>)</div>
+<div class="line">}</div>
+<div class="ttc" id="amain_8ino_html_a011ff3ce48468b16f85d17647b0dfdc1"><div class="ttname"><a href="#a011ff3ce48468b16f85d17647b0dfdc1">BTN_ESQUERDA</a></div><div class="ttdeci">#define BTN_ESQUERDA</div><div class="ttdef"><b>Definição</b> <a href="main_8ino_source.html#l00067">main.ino:67</a></div></div>
+<div class="ttc" id="amain_8ino_html_a66946a5626226a02f937c4bf6fbd11c9"><div class="ttname"><a href="#a66946a5626226a02f937c4bf6fbd11c9">BTN_TRAS</a></div><div class="ttdeci">#define BTN_TRAS</div><div class="ttdef"><b>Definição</b> <a href="main_8ino_source.html#l00065">main.ino:65</a></div></div>
+<div class="ttc" id="amain_8ino_html_aab2045f45ebaac6855a5674c8afafb7e"><div class="ttname"><a href="#aab2045f45ebaac6855a5674c8afafb7e">BTN_RESET</a></div><div class="ttdeci">#define BTN_RESET</div><div class="ttdef"><b>Definição</b> <a href="main_8ino_source.html#l00071">main.ino:71</a></div></div>
+<div class="ttc" id="amain_8ino_html_ac7bc83a8b8b6237af2d079597473c364"><div class="ttname"><a href="#ac7bc83a8b8b6237af2d079597473c364">BTN_DIREITA</a></div><div class="ttdeci">#define BTN_DIREITA</div><div class="ttdef"><b>Definição</b> <a href="main_8ino_source.html#l00069">main.ino:69</a></div></div>
+<div class="ttc" id="amain_8ino_html_af664840211950400111880ebce57e434"><div class="ttname"><a href="#af664840211950400111880ebce57e434">BTN_FRENTE</a></div><div class="ttdeci">#define BTN_FRENTE</div><div class="ttdef"><b>Definição</b> <a href="main_8ino_source.html#l00063">main.ino:63</a></div></div>
+</div><!-- fragment --><p>Mascara (bit no PINC ou no PINB) de cada botao, na ordem dos indices abaixo. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00427">427</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a01be081ddc67a80fbd938ac86930ba6f" name="a01be081ddc67a80fbd938ac86930ba6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01be081ddc67a80fbd938ac86930ba6f">&#9670;&#160;</a></span>tempoMs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint32_t tempoMs = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Milissegundos desde o boot. Alterada apenas na interrupcao do Timer1. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00158">158</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a0b7d706039d0cc1279689f9fc01bc8ad" name="a0b7d706039d0cc1279689f9fc01bc8ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b7d706039d0cc1279689f9fc01bc8ad">&#9670;&#160;</a></span>ultimaAmostraLDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ultimaAmostraLDR = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instante da ultima leitura do LDR, em ms. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00546">546</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a98d6c23ddd79d612c6a9def79f5f6a0a" name="a98d6c23ddd79d612c6a9def79f5f6a0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98d6c23ddd79d612c6a9def79f5f6a0a">&#9670;&#160;</a></span>ultimoDir</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t ultimoDir = 999</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ultimo valor aplicado ao motor direito (999 = nenhum ainda). </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00332">332</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a902a1eef50797f9c5f695f9b7a50bd95" name="a902a1eef50797f9c5f695f9b7a50bd95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a902a1eef50797f9c5f695f9b7a50bd95">&#9670;&#160;</a></span>ultimoEsq</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t ultimoEsq = 999</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ultimo valor aplicado ao motor esquerdo (999 = nenhum ainda). </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00330">330</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="ad992b968a57d270eed499be052dafd58" name="ad992b968a57d270eed499be052dafd58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad992b968a57d270eed499be052dafd58">&#9670;&#160;</a></span>valorLDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t valorLDR = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ultima leitura do ADC do LDR (0..1023). </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00542">542</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+<a id="a95481bcece7922e619e51af5e454d41d" name="a95481bcece7922e619e51af5e454d41d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95481bcece7922e619e51af5e454d41d">&#9670;&#160;</a></span>vidas</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t vidas = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Vidas restantes. </p>
+
+<p class="definition">Definição na linha <a class="el" href="main_8ino_source.html#l00149">149</a> do arquivo <a class="el" href="main_8ino_source.html">main.ino</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_6549bedf82156dc06df95cefb015444e.html">script</a></li><li class="navelem"><a href="main_8ino.html">main.ino</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

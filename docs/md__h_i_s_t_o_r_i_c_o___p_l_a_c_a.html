@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gigantes de MDF: Histórico da Placa – Gigantes de MDF</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gigantes de MDF
+   </div>
+   <div id="projectbrief">Firmware do robo (ATmega328P, Arduino Nano)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Busca" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('md__h_i_s_t_o_r_i_c_o___p_l_a_c_a.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Histórico da Placa – Gigantes de MDF </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md11"></a></p>
+<p>Registro da evolução do esquemático e da PCB do projeto. Cada versão traz o que foi feito, o que mudou e por quê. As versões ficam da mais recente para a mais antiga.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
+Visão geral</h1>
+<ul>
+<li><b>Microcontrolador:</b> ATmega328P, em um módulo Arduino Nano (16 MHz).</li>
+<li><b>Driver dos motores:</b> L293D (ponte H em CI, sem shield pronto).</li>
+<li><b>Alimentação:</b> duas baterias de lítio 18650 em série (7,4 V). A partir da v2.0, também pode ser 4 pilhas alcalinas de 1,5 V em série.</li>
+<li><b>Ferramenta do esquemático e da PCB:</b> KiCad.</li>
+<li><b>Simulação:</b> Tinkercad.</li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md14"></a>
+Versão 2.0 – 16/10/2026</h1>
+<p>Nova ligação dos pinos no Arduino Nano e novo projeto da PCB.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
+Esquemático</h2>
+<p>Os blocos do L293D, laser, LDR, LEDs e botões seguem os mesmos da v1.0. Mudaram a alimentação e a ligação dos sinais no Arduino Nano.</p>
+<p><b>Alimentação</b></p><ul>
+<li>O capacitor <span class="tt">C1</span> (100 µF) foi removido.</li>
+<li>A bateria pode ser as 2 baterias de lítio 18650 em série (como na v1.0) ou 4 pilhas alcalinas de 1,5 V em série. Em ambos os casos ela é ligada ao conector <span class="tt">7,4V1</span>.</li>
+</ul>
+<div align="center"> <table class="doxtable">
+<tr>
+<td align="center"><img src="assets/placa_v2_0_esquematico_bateria.png" alt="Esquemático v2.0 – bateria" width="200" class="inline"/><br  />
+<sub>Bateria, sem o capacitor C1</sub></td><td align="center"><img src="assets/placa_v2_0_esquematico_nano.png" alt="Esquemático v2.0 – Arduino Nano" width="220" class="inline"/><br  />
+<sub>Ligações no Arduino Nano</sub></td></tr>
+</table>
+<em>Esquemático v2.0 (KiCad)</em> </div><p><b>Ligações no Arduino Nano</b></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Sinal  </th><th class="markdownTableHeadNone">Pino do Nano  </th><th class="markdownTableHeadNone">Porta do ATmega328P  </th><th class="markdownTableHeadNone">Função  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">L1_M1</span>  </td><td class="markdownTableBodyNone">D2  </td><td class="markdownTableBodyNone">PD2  </td><td class="markdownTableBodyNone">Saída (sentido do motor 1)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">VM1</span>  </td><td class="markdownTableBodyNone">D3  </td><td class="markdownTableBodyNone">PD3  </td><td class="markdownTableBodyNone">PWM, <span class="tt">OC2B</span> (velocidade do motor 1)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">L2_M1</span>  </td><td class="markdownTableBodyNone">D4  </td><td class="markdownTableBodyNone">PD4  </td><td class="markdownTableBodyNone">Saída (sentido do motor 1)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">Ld3</span>  </td><td class="markdownTableBodyNone">D5  </td><td class="markdownTableBodyNone">PD5  </td><td class="markdownTableBodyNone">Saída (LED de vida)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Ld2</span>  </td><td class="markdownTableBodyNone">D6  </td><td class="markdownTableBodyNone">PD6  </td><td class="markdownTableBodyNone">Saída (LED de vida)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">Ld1</span>  </td><td class="markdownTableBodyNone">D7  </td><td class="markdownTableBodyNone">PD7  </td><td class="markdownTableBodyNone">Saída (LED de vida)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">L2_M2</span>  </td><td class="markdownTableBodyNone">D8  </td><td class="markdownTableBodyNone">PB0  </td><td class="markdownTableBodyNone">Saída (sentido do motor 2)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">Laser</span>  </td><td class="markdownTableBodyNone">D9  </td><td class="markdownTableBodyNone">PB1  </td><td class="markdownTableBodyNone">Saída  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">L1_M2</span>  </td><td class="markdownTableBodyNone">D10  </td><td class="markdownTableBodyNone">PB2  </td><td class="markdownTableBodyNone">Saída (sentido do motor 2)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">VM2</span>  </td><td class="markdownTableBodyNone">D11  </td><td class="markdownTableBodyNone">PB3  </td><td class="markdownTableBodyNone">PWM, <span class="tt">OC2A</span> (velocidade do motor 2)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Btn_R</span> (reset das vidas)  </td><td class="markdownTableBodyNone">D12  </td><td class="markdownTableBodyNone">PB4  </td><td class="markdownTableBodyNone">Entrada com pull-up  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">Btn_Re</span> (trás)  </td><td class="markdownTableBodyNone">A1  </td><td class="markdownTableBodyNone">PC1  </td><td class="markdownTableBodyNone">Entrada com pull-up  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Btn_Frnt</span> (frente)  </td><td class="markdownTableBodyNone">A2  </td><td class="markdownTableBodyNone">PC2  </td><td class="markdownTableBodyNone">Entrada com pull-up  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">Btn_Dir</span> (direita)  </td><td class="markdownTableBodyNone">A3  </td><td class="markdownTableBodyNone">PC3  </td><td class="markdownTableBodyNone">Entrada com pull-up  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Btn_Esq</span> (esquerda)  </td><td class="markdownTableBodyNone">A4  </td><td class="markdownTableBodyNone">PC4  </td><td class="markdownTableBodyNone">Entrada com pull-up  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">LDR</span>  </td><td class="markdownTableBodyNone">A5  </td><td class="markdownTableBodyNone">PC5 (ADC5)  </td><td class="markdownTableBodyNone">Entrada analógica (ADC)  </td></tr>
+</table>
+<p>Pinos sem uso: D0/D1 (serial), D13, A0, A6 e A7.</p>
+<p><b>Mudanças em relação à v1.0</b></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Sinal  </th><th class="markdownTableHeadNone">v1.0  </th><th class="markdownTableHeadNone">v2.0  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">L1_M1</span>  </td><td class="markdownTableBodyNone">D8  </td><td class="markdownTableBodyNone">D2  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">L2_M1</span>  </td><td class="markdownTableBodyNone">D7  </td><td class="markdownTableBodyNone">D4  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">VM1</span>  </td><td class="markdownTableBodyNone">D9  </td><td class="markdownTableBodyNone">D3  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">VM2</span>  </td><td class="markdownTableBodyNone">D10  </td><td class="markdownTableBodyNone">D11  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">L1_M2</span>  </td><td class="markdownTableBodyNone">D11  </td><td class="markdownTableBodyNone">D10  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">L2_M2</span>  </td><td class="markdownTableBodyNone">D12  </td><td class="markdownTableBodyNone">D8  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Laser</span>  </td><td class="markdownTableBodyNone">D3  </td><td class="markdownTableBodyNone">D9  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">LDR</span>  </td><td class="markdownTableBodyNone">A6  </td><td class="markdownTableBodyNone">A5  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Btn_R</span>  </td><td class="markdownTableBodyNone">D2  </td><td class="markdownTableBodyNone">D12  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">Btn_Re</span>  </td><td class="markdownTableBodyNone">A2  </td><td class="markdownTableBodyNone">A1  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Btn_Frnt</span>  </td><td class="markdownTableBodyNone">A5  </td><td class="markdownTableBodyNone">A2  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">Ld1</span> / <span class="tt">Ld2</span> / <span class="tt">Ld3</span>  </td><td class="markdownTableBodyNone">D4 / D5 / D6  </td><td class="markdownTableBodyNone">D7 / D6 / D5  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Btn_Dir</span>, <span class="tt">Btn_Esq</span>  </td><td class="markdownTableBodyNone">A3, A4  </td><td class="markdownTableBodyNone">A3, A4 (sem mudança)  </td></tr>
+</table>
+<p>Motivo da mudança: Falha da primeira placa e considerações feitas durante o estudo e o desenvolvimento dos requisitos e do programa necessários para o projeto funcionar.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
+Simulação no Tinkercad</h2>
+<p>O circuito do Tinkercad (Arduino Uno) corresponde à versão 2.0.</p>
+<p><img src="assets/placa_v2_0_tinkercad.png" alt="Circuito da v2.0 no Tinkercad" width="600" class="inline"/><br  />
+ <sub>Simulação da v2.0 no Tinkercad</sub> </p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
+PCB</h2>
+<p>Layout feito no KiCad, com o Arduino Nano v3.x (<span class="tt">A1</span>)</p>
+<div align="center"> <table class="doxtable">
+<tr>
+<td align="center"><img src="assets/placa_v2_0_pcb_posicionamento.png" alt="PCB v2.0 – posicionamento dos componentes" width="300" class="inline"/><br  />
+<sub>Posicionamento (antes do roteamento)</sub></td><td align="center"><img src="assets/placa_v2_0_pcb_roteada.png" alt="PCB v2.0 – roteada" width="320" class="inline"/><br  />
+<sub>Placa roteada</sub></td></tr>
+</table>
+<em>PCB v2.0 (KiCad)</em> </div><hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
+Versão 1.0 – 06/09/2026</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md20"></a>
+Esquemático</h2>
+<p>Primeira versão do esquemático, organizada em blocos.</p>
+<p><img src="assets/placa_v1_0_esquematico.png" alt="Esquemático v1.0" width="600" class="inline"/><br  />
+ <sub>Esquemático v1.0 (KiCad)</sub> </p>
+<p><b>Ligações no Arduino Nano</b></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Sinal  </th><th class="markdownTableHeadNone">Pino do Nano  </th><th class="markdownTableHeadNone">Porta do ATmega328P  </th><th class="markdownTableHeadNone">Função  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Btn_R</span> (reset das vidas)  </td><td class="markdownTableBodyNone">D2  </td><td class="markdownTableBodyNone">PD2  </td><td class="markdownTableBodyNone">Entrada, <span class="tt">INT0</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">Laser</span>  </td><td class="markdownTableBodyNone">D3  </td><td class="markdownTableBodyNone">PD3  </td><td class="markdownTableBodyNone">Saída  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Ld1</span>  </td><td class="markdownTableBodyNone">D4  </td><td class="markdownTableBodyNone">PD4  </td><td class="markdownTableBodyNone">Saída (LED de vida)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">Ld2</span>  </td><td class="markdownTableBodyNone">D5  </td><td class="markdownTableBodyNone">PD5  </td><td class="markdownTableBodyNone">Saída (LED de vida)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Ld3</span>  </td><td class="markdownTableBodyNone">D6  </td><td class="markdownTableBodyNone">PD6  </td><td class="markdownTableBodyNone">Saída (LED de vida)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">L2_M1</span>  </td><td class="markdownTableBodyNone">D7  </td><td class="markdownTableBodyNone">PD7  </td><td class="markdownTableBodyNone">Saída (sentido do motor 1)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">L1_M1</span>  </td><td class="markdownTableBodyNone">D8  </td><td class="markdownTableBodyNone">PB0  </td><td class="markdownTableBodyNone">Saída (sentido do motor 1)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">VM1</span>  </td><td class="markdownTableBodyNone">D9  </td><td class="markdownTableBodyNone">PB1  </td><td class="markdownTableBodyNone">PWM, <span class="tt">OC1A</span> (velocidade do motor 1)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">VM2</span>  </td><td class="markdownTableBodyNone">D10  </td><td class="markdownTableBodyNone">PB2  </td><td class="markdownTableBodyNone">PWM, <span class="tt">OC1B</span> (velocidade do motor 2)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">L1_M2</span>  </td><td class="markdownTableBodyNone">D11  </td><td class="markdownTableBodyNone">PB3  </td><td class="markdownTableBodyNone">Saída (sentido do motor 2)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">L2_M2</span>  </td><td class="markdownTableBodyNone">D12  </td><td class="markdownTableBodyNone">PB4  </td><td class="markdownTableBodyNone">Saída (sentido do motor 2)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">Btn_Re</span> (trás)  </td><td class="markdownTableBodyNone">A2  </td><td class="markdownTableBodyNone">PC2  </td><td class="markdownTableBodyNone">Entrada com pull-up  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Btn_Dir</span> (direita)  </td><td class="markdownTableBodyNone">A3  </td><td class="markdownTableBodyNone">PC3  </td><td class="markdownTableBodyNone">Entrada com pull-up  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">Btn_Esq</span> (esquerda)  </td><td class="markdownTableBodyNone">A4  </td><td class="markdownTableBodyNone">PC4  </td><td class="markdownTableBodyNone">Entrada com pull-up  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">Btn_Frnt</span> (frente)  </td><td class="markdownTableBodyNone">A5  </td><td class="markdownTableBodyNone">PC5  </td><td class="markdownTableBodyNone">Entrada com pull-up  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">LDR</span>  </td><td class="markdownTableBodyNone">A6  </td><td class="markdownTableBodyNone">ADC6  </td><td class="markdownTableBodyNone">Entrada analógica (ADC)  </td></tr>
+</table>
+<p>Pinos sem uso: D0/D1 (serial), D13, A0, A1 e A7. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>
