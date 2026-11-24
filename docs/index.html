@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gigantes de MDF: Gigantes de MDF</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gigantes de MDF
+   </div>
+   <div id="projectbrief">Firmware do robo (ATmega328P, Arduino Nano)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Busca" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('index.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Gigantes de MDF </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+Sobre o projeto</h1>
+<p>O projeto Gigantes de MDF foi desenvolvido como parte da disciplina de Programação de Hardware, com o objetivo de aplicar na prática os conhecimentos adquiridos durante o semestre, especialmente na programação de microcontroladores, no controle de componentes eletrônicos e na integração entre software e hardware.</p>
+<p>A proposta é um duelo entre robôs móveis: cada robô é controlado por botões, dispara um laser vermelho e tem um sensor de luz (LDR) que detecta o laser do adversário. Cada acerto tira uma das três vidas do robô, indicadas por LEDs. O foco do trabalho é a <b>programação direto nos registradores do ATmega328P</b>, sem bibliotecas prontas.</p>
+<p><img src="assets/carrinho1Milestone.jpeg" alt="Carrinho na protoboard" width="300" class="inline"/><br  />
+ <em>Primeiro milestone: quase um desastre, mas já andou</em> </p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+Como o robô funciona</h1>
+<ul>
+<li><b>Movimento:</b> o robô anda para frente, para trás e gira para a esquerda e para a direita enquanto o botão correspondente estiver pressionado. Se mais de um botão de movimento for apertado ao mesmo tempo, o robô para.</li>
+<li><b>Laser:</b> fica 1 segundo ligado e 1 segundo desligado, controlado por um timer.</li>
+<li><b>Acerto:</b> quando o LDR detecta o laser do adversário, o robô perde uma vida (um LED apaga), gira no próprio eixo e fica 5 segundos parado, com os motores e o receptor desativados.</li>
+<li><b>Eliminação:</b> com as três vidas esgotadas, o robô fica parado até o botão de reset ser apertado, que devolve as três vidas.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+Hardware</h1>
+<p>O circuito foi simulado no Tinkercad e depois montado em uma PCB projetada no KiCad.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Componente  </th><th class="markdownTableHeadNone">Função  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Arduino Nano (ATmega328P, 16 MHz)  </td><td class="markdownTableBodyNone">microcontrolador  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">L293D  </td><td class="markdownTableBodyNone">ponte H que aciona os dois motores  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">2 motores DC  </td><td class="markdownTableBodyNone">movimento do robô  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Laser vermelho de 5 mW  </td><td class="markdownTableBodyNone">arma  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">LDR + resistor de 10 kΩ  </td><td class="markdownTableBodyNone">receptor do laser (divisor de tensão lido pelo ADC)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">3 LEDs + resistores de 330 Ω  </td><td class="markdownTableBodyNone">vidas do robô  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">5 botões  </td><td class="markdownTableBodyNone">frente, trás, esquerda, direita e reset  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">2 capacitores de 100 nF  </td><td class="markdownTableBodyNone">filtro de ruído nos terminais dos motores  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Bateria  </td><td class="markdownTableBodyNone">2 células de lítio 18650 em série (7,4 V) ou 4 pilhas alcalinas AA  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+Ligação dos pinos (esquemático v2.0)</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Função  </th><th class="markdownTableHeadNone">Pino do Nano  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Motor esquerdo: habilitação (PWM) / sentido  </td><td class="markdownTableBodyNone">D3 / D2 e D4  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Motor direito: habilitação (PWM) / sentido  </td><td class="markdownTableBodyNone">D11 / D10 e D8  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Botões: frente / trás / esquerda / direita  </td><td class="markdownTableBodyNone">A2 / A1 / A4 / A3  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Botão de reset  </td><td class="markdownTableBodyNone">D12  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">LDR (entrada analógica)  </td><td class="markdownTableBodyNone">A5  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Laser  </td><td class="markdownTableBodyNone">D9  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">LEDs de vida  </td><td class="markdownTableBodyNone">D5, D6 e D7  </td></tr>
+</table>
+<p><img src="assets/placa_v2_0_tinkercad.png" alt="Circuito da versão 2.0 no Tinkercad" width="520" class="inline"/><br  />
+ <em>Circuito da versão 2.0 no Tinkercad</em> </p>
+<p><img src="assets/placa_v2_0_esquematico_nano.png" alt="Esquemático: ligações do Arduino Nano" width="220" class="inline"/> <img src="assets/placa_v2_0_pcb_roteada.png" alt="PCB roteada da versão 2.0" width="320" class="inline"/><br  />
+ <em>Esquemático (ligações do Nano) e PCB da versão 2.0, feitos no KiCad</em> </p>
+<p>A evolução do esquemático e da PCB, com as versões e os motivos de cada mudança, está em <a class="el" href="md__h_i_s_t_o_r_i_c_o___p_l_a_c_a.html" title="Histórico da Placa – Gigantes de MDF">HISTORICO_PLACA.md</a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+Software</h1>
+<p>O firmware é escrito em C/C++ para o microcontrolador AVR, direto nos registradores: não usa funções do Arduino como <span class="tt">digitalWrite</span>, <span class="tt">analogWrite</span> ou <span class="tt">millis</span>.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Periférico  </th><th class="markdownTableHeadNone">Uso  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Timer1 (modo CTC)  </td><td class="markdownTableBodyNone">base de tempo de 1 ms e controle do laser (1 s ligado, 1 s desligado)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Timer2 (Fast PWM de 8 bits)  </td><td class="markdownTableBodyNone">PWM dos dois motores, por volta de 976 Hz  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">ADC (canal 5)  </td><td class="markdownTableBodyNone">leitura do LDR  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">USART0  </td><td class="markdownTableBodyNone">mensagens de depuração a 115200 baud (valor do LDR, vidas e eventos)  </td></tr>
+</table>
+<p>O programa é uma máquina de estados com três estados: <b>ativo</b> (controle manual e leitura do LDR), <b>atingido</b> (giro e pausa de proteção) e <b>eliminado</b> (aguarda o reset).</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+Parâmetros ajustáveis</h2>
+<p>Ficam no começo do código. O limiar do LDR e o tempo do giro foram medidos e ajustados na placa:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Constante  </th><th class="markdownTableHeadNone">Valor  </th><th class="markdownTableHeadNone">Significado  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt"><a class="el" href="main_8ino.html#ac2cd7394c5e37df51fef469b067209af">VELOCIDADE</a></span>  </td><td class="markdownTableBodyNone">200  </td><td class="markdownTableBodyNone">duty do PWM (0 a 255)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt"><a class="el" href="main_8ino.html#aece98daf3f4d906d38ea6c03ae3d4f58">TEMPO_GIRO_MS</a></span>  </td><td class="markdownTableBodyNone">500  </td><td class="markdownTableBodyNone">duração do giro após um acerto  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt"><a class="el" href="main_8ino.html#a2d731619431edb138ef0b06fcbad7e00">TEMPO_PROTECAO_MS</a></span>  </td><td class="markdownTableBodyNone">5000  </td><td class="markdownTableBodyNone">tempo com motores e receptor desativados  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt"><a class="el" href="main_8ino.html#a4dbd908a61f0cf0eb6d89e957f376c63">LDR_LIMIAR_DISPARO</a></span>  </td><td class="markdownTableBodyNone">800  </td><td class="markdownTableBodyNone">leitura do ADC (0 a 1023) que indica laser  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt"><a class="el" href="main_8ino.html#a2aabff142749051d96c39e7febb833d8">LDR_CONFIRMACOES</a></span>  </td><td class="markdownTableBodyNone">6  </td><td class="markdownTableBodyNone">leituras seguidas (uma a cada 5 ms) para confirmar o acerto  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt"><a class="el" href="main_8ino.html#add56dedbc09f82766e39588e01978e7d">DEBOUNCE_MS</a></span>  </td><td class="markdownTableBodyNone">20  </td><td class="markdownTableBodyNone">tempo de estabilidade dos botões de movimento  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+Estrutura do repositório</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Item  </th><th class="markdownTableHeadNone">Conteúdo  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">script/</span>  </td><td class="markdownTableBodyNone">código do firmware  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">assets/</span>  </td><td class="markdownTableBodyNone">imagens do projeto (fotos, esquemático, PCB)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt"><a class="el" href="_h_i_s_t_o_r_i_c_o___p_l_a_c_a_8md.html">HISTORICO_PLACA.md</a></span>  </td><td class="markdownTableBodyNone">histórico do esquemático e da PCB  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+Documentação do software</h1>
+<p>Os comentários do código seguem o padrão do <b>Doxygen</b> (<span class="tt">/** ... */</span>, com <span class="tt">@brief</span>, <span class="tt">@param</span> e <span class="tt">@return</span>). A documentação gerada fica na pasta <a href="docs/"><span class="tt">docs/</span></a>: abra o <span class="tt">docs/index.html</span> no navegador. A página inicial dela é este próprio README.</p>
+<p>Para gerar de novo (por exemplo, depois de mudar o código), na raiz do projeto:</p>
+<ol type="1">
+<li><span class="tt">doxygen Doxyfile</span></li>
+<li>copie a pasta <span class="tt">assets</span> para dentro de <span class="tt">docs</span> (as imagens do README usam o caminho <span class="tt">assets/...</span>).</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+Milestones</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Data  </th><th class="markdownTableHeadNone">Entrega  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">05/10/2026  </td><td class="markdownTableBodyNone">estrutura funcional do robô, andando com baterias  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">26/10/2026  </td><td class="markdownTableBodyNone">circuito com motores, sensor e laser ligados ao microcontrolador  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">23/11/2026  </td><td class="markdownTableBodyNone">apresentação do projeto final  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+Considerações finais</h1>
+<p>O desenvolvimento deste projeto permite consolidar os conhecimentos de programação de hardware por meio de uma aplicação prática, aproximando a programação do funcionamento de um sistema físico real.</p>
+<p>A proposta prioriza a programação e a integração entre os componentes eletrônicos, mantendo a complexidade mecânica dentro do necessário para o funcionamento do robô. Dessa forma, o grupo busca desenvolver uma solução funcional, organizada e de fácil compreensão, aplicando os conceitos estudados ao longo da disciplina. </p>
+</div></div><!-- PageDoc -->
+<a href="doxygen_crawl.html"></a>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>
